@@ -1,0 +1,61 @@
+<%- include('partials/head') %>
+<title>
+    Blog
+</title>
+
+<%- include('partials/nav') %>
+
+
+<div class="container p-2 bg-white">
+<div class="container mt-4 ">
+    <div class="bg-secondary rounded">
+    <img style="height: 30vh; width:100vw;" class="img-fluid rounded p-4" src="/uploads/<%= blog.coverImage %>" alt="something">
+    <div class="container m-1 ">
+        
+       
+        <img class="rounded-circle mb-2" style="height: 30px; width: 25px;" src="<%= blog.createdBy.profile %>" alt="profile">
+        <p class="text-uppercase fw-bold"> <%= blog.createdBy.username %> <span> (<%= blog.createdAt.toLocaleString() %>)</span></p>
+    </div>
+</div>
+
+    
+    <h1 class="text-center text-uppercase mt-2 fw-bold ">  <%= blog.title %></h1>
+
+    <div class="container overflow-hidden">
+        <pre style="white-space: pre-wrap; word-wrap: break-word;">
+           <%= blog.body %>
+        </pre>
+    </div>
+
+</div>
+
+<div>
+   <h1>Comment</h1>
+    
+    <% comment.forEach(comme => { %>
+
+        <div class=" p-2 h-2 w-2 border m-2 align-center">
+            <img style="height: 35px;" src="<%= comme.createdBy.profile %>" alt="<%= comme.createdBy.profile %>"> <%= comme.createdBy.username %>
+        <p class="fw-bold ms-5 mt-2"><%= comme.content %></p> 
+    </div>
+     
+    <% }) %>
+</div>
+
+ 
+
+ <% if (locals.user) { %>
+  
+    <form class="mb-5" action="comment/<%= blog._id %>" method="post">
+        <div class="mb-3">
+            <!-- <label for="comment" class="form-label">Pofile Image</label> -->
+            <input type="text" class="form-control" id="comment" name="content" placeholder="comment">
+          </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+ <% } %>
+
+</div>
+
+<%- include('./partials/footer') %>

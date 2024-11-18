@@ -1,0 +1,29 @@
+<%- include('./partials/head') %>
+    <title>AddBlog</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="ms-4 me-4 p-4">
+    <form action="/blog" method="post" enctype="multipart/form-data" >
+
+            <div>
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title"  aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="body" class="form-label">Description</label>
+              <!-- <input type="message" rows="5" class="form-control" id="body" name="body" > -->
+              <textarea spellcheck="true" id="body" name="body" rows="4" class="form-control" placeholder="Enter your content here..."></textarea>
+
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Profile Image</label>
+                <input type="file" class="form-control" id="coverImage" name="coverImage" v>
+              </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+    
+    </form>
+  </div>
+</body>
+</html

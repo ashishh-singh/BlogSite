@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/css/login&sign.css">
+</head>
+<body>
+  <div class="form-container">
+    <form action="/signup" method="POST">
+      <div class="form">
+        <h2>Sign Up</h2>
+      
+     
+        <div class="input-group">
+          <label for="signup-name">User Name</label>
+          <input type="text" id="signup-name" placeholder="Enter your full name" name="username" required>
+        </div>
+        
+    
+        <div class="input-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="Enter your email" name="email" required>
+        </div>
+
+       
+        <div class="input-group">
+          <label>Gender</label>
+          <div class="gender-options">
+            <div class="gender-option">
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </div>
+
+    
+        <div class="input-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Enter your password" name="password" required minlength="8">
+        </div>
+
+       
+        <button type="submit">Sign Up</button>
+        <div class="error" style="margin-top:15px;">
+          <p style="color:red;"> <%- locals.err %></p>
+      </div>
+        <p style="margin-top: 15px;">Already have an account? <a href="/login">Login</a></p>
+        
+      </div>
+    </form>
+  </div>
+</body>
+</html>

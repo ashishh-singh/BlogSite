@@ -1,0 +1,149 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f2f2f2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Form Container Styling */
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+/* Title Styling */
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3498db;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin-bottom: 25px;
+}
+
+/* Gender Section - Flex Layout for Row */
+.gender-options {
+  display: flex; /* Use flexbox to align elements in a row */
+  gap: 25px; /* Space between each radio button option */
+  margin-top: 10px; /* Optional space from label */
+}
+
+.gender-option {
+  display: flex;
+  align-items: center; /* Align radio button and label horizontally */
+}
+
+.gender-option input[type="radio"] {
+  margin-right: 5px; 
+  margin-bottom: 10px;/* Space between radio button and label */
+}
+
+.gender-option label {
+  font-size: 16px;
+  color: #666;
+  margin-left: 5px; /* Add a little space between the radio button and the label */
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Input Field Styling */
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Button Styling */
+button {
+    padding: 15px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    background-color: #1c6f98;
+    transform: translateY(2px);
+}
+
+/* Link Text Styling */
+p {
+    text-align: center;
+    color: #666;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .form h2 {
+        font-size: 24px;
+    }
+}
