@@ -29,7 +29,7 @@ app.use("/", blogroute)
 
 Mongo_URL = 'mongodb+srv://autophileashish:Myblog@blog.dhs5b.mongodb.net/'
 
-mongo.connect(process.env.Mongo_URL).then((e)=> console.log("MongoDb is connected" + Mongo_URL))
+mongo.connect(process.env.Mongo_URL, { useNewUrlParser: true, useUnifiedTopology: true })).then((e)=> console.log("MongoDb is connected" + Mongo_URL))
 // mongo.connect("mongodb://localhost:27017/bloguser").then(() => console.log(`Server is connected to mongoose`)).catch((err) => console.log(err))
 
 const html = `
