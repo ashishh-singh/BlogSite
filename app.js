@@ -27,7 +27,7 @@ app.use(checkforAuthenticationCookie('value'));
 app.use("/", route)
 app.use("/", blogroute)
 
-Mongo_URL = 'mongodb+srv://autophileashish:Myblog@blog.dhs5b.mongodb.net/'
+Mongo_URL = "mongodb+srv://autophileashish:Myblog@blog.dhs5b.mongodb.net/?retryWrites=true&w=majority&appName=Blog"
 
 mongo.connect(process.env.Mongo_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then((e)=> console.log("MongoDb is connected" + Mongo_URL))
 // mongo.connect("mongodb://localhost:27017/bloguser").then(() => console.log(`Server is connected to mongoose`)).catch((err) => console.log(err))
